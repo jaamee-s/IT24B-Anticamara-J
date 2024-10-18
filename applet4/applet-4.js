@@ -37,3 +37,5 @@ class StudentList {
         studentSearchBar.addEventListener('input', () => {
             this.filterStudents(studentSearchBar.value);
         });
+        this.renderStudentList(this.students);
+    }
