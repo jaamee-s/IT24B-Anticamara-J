@@ -56,3 +56,12 @@ class AppletRenderer {
             const cardElement = appletCard.createCard();
             this.container.appendChild(cardElement);
         });
+        this.initializeTooltips();
+    }
+
+    initializeTooltips() {
+        const tooltipTriggerList = [].slice.call(this.container.querySelectorAll('[data-bs-toggle="tooltip"]'));
+        tooltipTriggerList.forEach(tooltipTriggerEl => {
+            new bootstrap.Tooltip(tooltipTriggerEl);
+        });
+    }
