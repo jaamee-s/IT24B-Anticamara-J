@@ -44,3 +44,8 @@ class StudentList {
             const fullName = `${student.student_name} ${student.student_program}`;
             return fullName.toLowerCase().includes(query.toLowerCase());
         });
+        this.renderStudentList(filteredStudents);
+    }
+}
+
+const studentList = new StudentList('applet-4.json');
